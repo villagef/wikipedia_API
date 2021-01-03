@@ -15,37 +15,24 @@
         <h1 class="offscreen">Search Me a Wikipedia Power Search Engine</h1>
         <section class="searchEntry">
             <h2 class="offscreen">Search Term Entry</h2>
-            <div class="logo" aria-hidden="true">Wiki Search <span class="exclaim">!</span></div>
-            <form id="searchBar" class="searchBar">
-                <label for="search" class="offscreen">Enter a search term or phrase</label>
-                <input type="text" class="search" autocomplete="off" />
-                <div id="clear" class="none button clear" role="button" tabindex="0" aria-label="Clear search terms"><i class="fas fa-times"></i></div>
-                <button class="button searchButton" id="searchButton" type="submit" aria-label="Submit button"><i class="fas fa-search"></i></button>
-
+            <div class="logo" aria-hidden="true"><a href="/"> Wiki Search <span class="exclaim">!</span></a></div>
+            <form id="searchBar" class="searchBar" role="search"> 
+                <label class="offscreen" for="search">Enter a search term or phrase</label>
+                <input id="search" type="text" autocomplete="off" role="searchbox" />
+                <div id="clear" class="none button clear" role="button" tabindex="0" aria-label="Clear search terms">
+                    <i class="fas fa-times"></i>
+                </div>
+                <button id="searchButton" class="button searchButton" type="submit" aria-label="Submit button">
+                    <i class="fas fa-search blue"></i>
+                </button>
             </form>
         </section>
         <section class="results">
             <h2 class="offscreen">Search Results</h2>
-            <div class="statsBar"> 
-                <div id="stats" class="stats" aria-live="assertive">
-
-                </div>
+            <div class="statsBar">
+                <div id="stats" class="stats" aria-live="assertive"></div>
             </div>
-            <div class="searchResults" id="searchResults">
-                <div class="resultItem">
-                    <div class="resultTitle">
-                        <a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a>
-                    </div>
-                    <div class="resultContents">
-                        <div class="resultImage">
-                            <img src="https://assets.pokemon.com/assets/cms2/img/misc/countries/pl/country_detail_pokemon.png" alt="Pokemon" srcset="">
-                        </div>
-                        <div class="resultText">
-                            <p class="reasultDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ducimus quae, eum neque minus natus a deserunt dicta obcaecati dignissimos qui, tempora perferendis aut odit ipsum magnam nobis expedita sequi.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="searchResults" class="searchResults"></div>
         </section>
     </main>
     <footer>

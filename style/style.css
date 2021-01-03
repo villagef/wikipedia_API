@@ -17,8 +17,7 @@ main, footer, .searchEntry, .results, .results .searchResults .resultItem {
 html,
 body {
   background-color: #fff;
-  color: #000;
-  width: 100vw;
+  color: black;
   min-height: 100vh;
   font-family: "Lato", Arial, sans-serif;
   font-size: 22px;
@@ -60,7 +59,6 @@ footer p a {
 
 img {
   display: block;
-  max-width: 200px;
 }
 
 .exclaim {
@@ -107,6 +105,7 @@ img {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #006ce7;
 }
 
 @media only screen and (min-width: 768px) {
@@ -114,6 +113,16 @@ img {
     font-size: 4rem;
     letter-spacing: -10px;
   }
+}
+
+.searchEntry .logo a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.searchEntry .logo a:visited {
+  color: #006ce7;
 }
 
 .searchEntry .searchBar {
@@ -186,12 +195,12 @@ img {
 
 .searchEntry .searchBar .searchButton:hover i,
 .searchEntry .searchBar .searchButton:focus i {
-  color: green;
+  color: #006ce7;
 }
 
 .searchEntry .searchBar .clear:hover i,
 .searchEntry .searchBar .clear:focus i {
-  color: #000;
+  color: black;
 }
 
 @media only screen and (min-width: 768px) {
@@ -231,7 +240,7 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   width: 90vw;
 }
 
@@ -275,12 +284,21 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  padding: 0.25rem 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #eceaea;
+  border-radius: 5px;
+  margin: 5px 0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, #c8dcff));
+  background: linear-gradient(to right, white 50%, #c8dcff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
   .results .searchResults .resultItem {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.25rem;
   }
 }
 
@@ -328,10 +346,6 @@ img {
   width: 100%;
 }
 
-.results .searchResults .resultItem .resultContents .resultImage {
-  margin-right: 0.5rem;
-}
-
 .results .searchResults .resultItem .resultContents .resultText {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -348,5 +362,9 @@ img {
     font-size: 1rem;
     line-height: 28px;
   }
+}
+
+.results .searchResults .resultItem:hover {
+  background-position: right bottom;
 }
 /*# sourceMappingURL=style.css.map */

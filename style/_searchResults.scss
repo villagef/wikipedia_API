@@ -1,6 +1,6 @@
 .results {
   @include flexColumn;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   width: 90vw;
   @include mq(768px) {
     width: 75vw;
@@ -15,6 +15,7 @@
     .stats {
       color: $stats-color;
       font-size: 0.75rem;
+
       @include mq(768px) {
         font-size: 1rem;
       }
@@ -27,9 +28,21 @@
     .resultItem {
       @include flexColumn;
       width: 100%;
-      padding: 0.25rem 0;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid rgb(236, 234, 234);
+      border-radius: 5px;
+      margin: 5px 0;
+      background: linear-gradient(
+        to right,
+        rgb(255, 255, 255) 50%,
+        rgb(200, 220, 255) 50%
+      );
+      background-size: 200% 100%;
+      background-position: left bottom;
+      // margin-left: 10px;
+      transition: all 0.7s ease-in-out;
       @include mq(768px) {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0.25rem;
       }
 
       .resultTitle {
@@ -70,7 +83,7 @@
         width: 100%;
 
         .resultImage {
-          margin-right: 0.5rem;
+          // margin-right: 0.5rem;
         }
 
         .resultText {
@@ -86,6 +99,10 @@
           }
         }
       }
+    }
+
+    .resultItem:hover {
+      background-position: right bottom;
     }
   }
 }
