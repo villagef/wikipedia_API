@@ -29,18 +29,7 @@
       @include flexColumn;
       width: 100%;
       padding: 0.25rem 0.5rem;
-      border: 1px solid rgb(236, 234, 234);
-      border-radius: 5px;
-      margin: 5px 0;
-      background: linear-gradient(
-        to right,
-        rgb(255, 255, 255) 50%,
-        rgb(200, 220, 255) 50%
-      );
-      background-size: 200% 100%;
-      background-position: left bottom;
-      // margin-left: 10px;
-      transition: all 0.7s ease-in-out;
+      transition: all 0.1s ease-in-out;
       @include mq(768px) {
         padding: 0.5rem 0.25rem;
       }
@@ -102,7 +91,7 @@
     }
 
     .resultItem:hover {
-      background-position: right bottom;
+      box-shadow: 0 2px 5px 2px $search-bar-border;
     }
   }
 }

@@ -285,15 +285,8 @@ img {
           justify-content: flex-start;
   width: 100%;
   padding: 0.25rem 0.5rem;
-  border: 1px solid #eceaea;
-  border-radius: 5px;
-  margin: 5px 0;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, #c8dcff));
-  background: linear-gradient(to right, white 50%, #c8dcff 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -365,6 +358,7 @@ img {
 }
 
 .results .searchResults .resultItem:hover {
-  background-position: right bottom;
+  -webkit-box-shadow: 0 2px 5px 2px #e6e6e6;
+          box-shadow: 0 2px 5px 2px #e6e6e6;
 }
 /*# sourceMappingURL=style.css.map */
